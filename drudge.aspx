@@ -1,64 +1,26 @@
-DataTable dt = new DataTable();
-dt.Columns.Add("title", Type.GetType("System.String"));
-dt.Columns.Add("link", Type.GetType("System.String"));
+<form id="form1" runat="server">
 
-// ASP.NET Article of the Day
-string rssURL = "http://asp.net/community/articles/rss.ashx";
+<div id="parentDIV">
+<p><a href="/">Return to Digital Colony</a></p>
+    <div id="headerDIV" >
 
-XmlDocument doc = new XmlDocument();
-doc.XmlResolver = null;
-doc.Load(rssURL);
+        <asp:Image ID="imgHeader" runat="server" Width="400" Height="300" BorderWidth="1" />
 
-// display a different image based upon day of week
-int dayOfWeek = (int)DateTime.Now.DayOfWeek;
+        <div id="topstoryDIV"><asp:HyperLink ID="hypTopStory" runat="server" /></div>
 
-switch (dayOfWeek)
-{
-    case 0:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/117793421-S.jpg";
-        break;
-    case 1:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/118708221-S.jpg";
-        break;
-    case 2:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/95113678-S.jpg";
-        break;
-    case 3:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/91872258-S.jpg";
-        break;
-    case 4:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/91842649-S.jpg";
-        break;
-    case 5:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/79938653-S.jpg";
-        break;
-    default:
-        imgHeader.ImageUrl = "http://criticalmas.smugmug.com/photos/92103181-S.jpg";
-        break;
-}        
+        <img src="aspnet-report.gif" width="716" height="137" alt="ASP.NET Report" />
 
-XmlNode oNode = doc.DocumentElement;
-XmlNodeList oNodeList = oNode.SelectNodes("channel/item");
+    </div>
+    <div id="storiesDIV">
+    <asp:DataList ID="dlStories" runat="server" RepeatColumns="3" Width="100%" CellPadding="5">
 
-for (int itemCount = 0; itemCount < oNodeList.Count; itemCount++)
-{
-    string title = oNodeList[itemCount].SelectSingleNode("title").InnerText;
-    string link = oNodeList[itemCount].SelectSingleNode("link").InnerText;
+        <ItemTemplate>
+          <a href="<%# Eval("link") %>"><%# Eval("title") %></a>
 
-    if (itemCount == 0)
-    {
-        // top story
+          <hr />
+        </ItemTemplate>
+    </asp:DataList>
+    </div>
+</div>
 
-        hypTopStory.Text = title.ToUpper();
-        hypTopStory.NavigateUrl = link;
-    }
-    else
-    {
-        DataRow dr = dt.NewRow();
-        dr["title"] = title;
-        dr["link"] = link;
-        dt.Rows.Add(dr);
-    }
-}
-dlStories.DataSource = dt;
-dlStories.DataBind();
+</form>
