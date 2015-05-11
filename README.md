@@ -31,7 +31,6 @@ When pulling RSS feeds, it is wise to be considerate of the bandwidth of your ho
 
 <%@ OutputCache Duration="86400" VaryByParam="none" %>
 
-DEMO = http://digitalcolony.com/lab/aspnetreport/AspNetReport.aspx
 
 Better Than Drudge
 
