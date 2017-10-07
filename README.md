@@ -16,6 +16,8 @@ The logo was created using the Impact font at 100 points and Italic. In PhotoSho
 
 Drudge uses a large upper-case Arial font for the top story and Courier for the 3-column stories. All links are black.
 
+![ASP.NET Report](aspnet-report.gif)
+
 ## The Code
 
 The RSS feed is loaded into an XmlDocument. The first story in the RSS feed will be designated the top story. The rest of the stories will be loaded into a DataTable which is binded to the asp:DataList.
