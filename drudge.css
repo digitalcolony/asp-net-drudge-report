@@ -1,23 +1,22 @@
-body
-{
-    font-family: "Courier New", Courier, monospaced;
-    font-size: 10pt;
-    font-weight: bold;
-    color: #000;
-    background-color: #fff;
+body {
+  font-family: "Courier New", Courier, monospaced;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
 }
-#headerDIV
-{
-    text-align: center;
+#headerDIV {
+  text-align: center;
 }
-#topstoryDIV
-{
-    font-size:32pt;
-    font-weight:bold;
-    font-family: Arial, Verdana, Helvetica;
+#topstoryDIV {
+  font-size: 32pt;
+  font-weight: bold;
+  font-family: Arial, Verdana, Helvetica;
 }
-a:link, a:active, a:visited {
-    color:#000;
-    text-decoration:underline;
-    line-height:1.2;
+a:link,
+a:active,
+a:visited {
+  color: #000;
+  text-decoration: underline;
+  line-height: 1.2;
 }
