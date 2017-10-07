@@ -37,3 +37,5 @@ When pulling RSS feeds, it is wise to be considerate of the bandwidth of your ho
 ## Better Than Drudge
 
 Unlike The Drudge Report which uses awful HTML, our `ASP.NET` version is both XHTML and CSS compliant. It also validates under Section 508.
+
+![Drudge Report](screen-shot.png)
