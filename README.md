@@ -1,7 +1,5 @@
 # Create the Drudge Report Look (`ASP.NET`)
 
-Create a Drudge Report looking site using `ASP.NET`. 
-
 Matt Drudge started The Drudge Report while working the graveyard shift at 7-11. He was at the store when the newspapers first arrived and most of the world was asleep. He was able to parlay that first access to the news into creating one of the most popular sites on the internet. Read his book Drudge Manifesto if you wish to learn more about his rise to fame.
 
 Unlike Matt Drudge, I have no desire to get up super early and go through endless newspapers to create a hand-edited HTML page of my favorite links. Fortunately for me, we now have RSS feeds. This article will mix the ASP.NET article of the day RSS feed with the Drudge look and feel to create the ASP.NET Report.
@@ -39,3 +37,5 @@ When pulling RSS feeds, it is wise to be considerate of the bandwidth of your ho
 Unlike The Drudge Report which uses awful HTML, our `ASP.NET` version is both XHTML and CSS compliant. It also validates under Section 508.
 
 ![Drudge Report](screen-shot.png)
+
+_created: March 26, 2007_
